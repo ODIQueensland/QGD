@@ -1,0 +1,199 @@
+{
+  "fields": [{
+      "name": "Id",
+      "title": "Identifier",
+      "description": "Unique document identifier automatically generated",
+      "type": "integer",
+      "format": "default",
+      "constraints": {
+        "required": true,
+        "unique": true
+      }
+    },
+    {
+      "name": "Organisation",
+      "title": "Organisation",
+      "description": "The name of the organisation that has provided the document",
+      "type": "string",
+      "format": "default",
+      "constraints": {
+        "required": true
+      }
+    },
+    {
+      "name": "Organisation URL",
+      "title": "Organisation URL",
+      "description": "The home page of the organisation",
+      "type": "string",
+      "format": "default",
+      "constraints": {
+        "required": false
+      }
+    },
+    {
+      "name": "Project",
+      "title": "Project",
+      "description": "The project name as provided by the contributing organisation",
+      "type": "string",
+      "format": "default",
+      "constraints": {
+        "required": false
+      }
+    },
+    {
+      "name": "Date Completed",
+      "title": "Date Completed",
+      "description": "The date the borehole drilling was completed in ISO8601 extended date format",
+      "type": "date",
+      "format": "default",
+      "constraints": {
+        "required": false
+      }
+    },
+    {
+      "name": "Category",
+      "title": "The type of document: Borehole, Trial pit, Cone penetration test",
+      "description": "The type of document: Borehole, Trial pit, Cone penetration test",
+      "type": "string",
+      "format": "default",
+      "constraints": {
+        "required": false,
+        "pattern": "(Borehole|Trial pit|Cone penetration test)"
+      }
+    },
+    {
+      "name": "Document",
+      "title": "Document",
+      "description": "Name of document as provided by the contributing organisation",
+      "type": "string",
+      "format": "default",
+      "constraints": {
+        "required": true
+      }
+    },
+    {
+      "name": "Final Depth (m)",
+      "title": "Final Depth (m)",
+      "description": "The final depth of the borehole in meters",
+      "type": "number",
+      "format": "default",
+      "constraints": {
+        "required": false
+      }
+    },
+    {
+      "name": "RL Top (m)",
+      "title": "Rl Top (m)",
+      "description": "The reduced level of the top of the borehole in meters",
+      "type": "number",
+      "format": "default",
+      "constraints": {
+        "required": false
+      }
+    },
+    {
+      "name": "Latitude",
+      "title": "Latitude",
+      "description": "Decimal Latitude Coordinate on the Geocentric Datum of Australia (GDA94). Constrained to Queensland",
+      "type": "number",
+      "format": "default",
+      "constraints": {
+        "required": true,
+        "minimum": -29.5,
+        "maximum": -9
+      }
+    },
+    {
+      "name": "Longitude",
+      "title": "Longitude",
+      "description": "Decimal Longitude Coordinate on the Geocentric Datum of Australia (GDA94)",
+      "type": "number",
+      "format": "default",
+      "constraints": {
+        "required": true,
+        "minimum": 138,
+        "maximum": 155
+      }
+    },
+    {
+      "name": "Coord Accuracy",
+      "title": "Coordinate Accuracy",
+      "description": "The accuracy of the coordinates based on the method of data collection as provided by the contributing organisation.",
+      "type": "string",
+      "format": "default",
+      "constraints": {
+        "required": false,
+        "pattern": "(Surveyed <1m|GPS handheld 5-15m|unknown)"
+      }
+    },
+    {
+      "name": "Document URL",
+      "title": "Document Url",
+      "description": "A URL that links to a PDF of the geotechnical document, if available.",
+      "type": "string",
+      "format": "uri",
+      "constraints": {
+        "required": false
+      }
+    },
+    {
+      "name": "Document Licence",
+      "title": "Document Licence",
+      "description": "The licence that applies to the geotechnical document, as specified by the document owner, if it is not shown in the document.  If the licence is shown on the geotechnical document, this value is “embedded”",
+      "type": "string",
+      "format": "default",
+      "constraints": {
+        "required": true,
+        "pattern": "(CC BY|CC BY-SA|embedded)"
+      }
+    },
+    {
+      "name": "Document Licence URL",
+      "title": "Document Licence URL",
+      "description": "The web address where the full licence terms for the document found at Document URL can be accessed",
+      "type": "string",
+      "format": "uri"
+    },
+    {
+      "name": "Data",
+      "title": "Data",
+      "description": "Name of data as provided by the contributing organisation",
+      "type": "string",
+      "format": "default",
+      "constraints": {
+        "required": false
+      }
+    },
+    {
+      "name": "Data URL",
+      "title": "Data URL",
+      "description": "The web address of the data that is contained in the document. The data must be in a standard in a machine-readable format.",
+      "type": "string",
+      "format": "uri",
+      "constraints": {
+        "required": false
+      }
+    },
+    {
+      "name": "Data Licence",
+      "title": "Data Licence",
+      "description": "The licence name that applies to the use of the data found at the Data URL",
+      "type": "string",
+      "format": "default",
+      "constraints": {
+        "required": false,
+        "pattern": "(CC BY|CC BY-SA|embedded)"
+      }
+    },
+    {
+      "name": "Data Licence URL",
+      "title": "Data Licence URL",
+      "description": "The web address where the full licence terms for the data at Data URL can be accessed",
+      "type": "string",
+      "format": "uri",
+      "constraints": {
+        "required": false
+      }
+    }
+  ]
+}
